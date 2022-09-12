@@ -3,4 +3,21 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
        version="2.3">
+       
+       
+       <application>
+			<message-bundle>br.edu.iffar.tarefas.MensagensPersonalizadas</message-bundle>
+			
+			<locale-config>
+		    	<default-locale>pt_br</default-locale>
+		  	</locale-config>
+		  	
+		</application>
+		
+		<lifecycle>
+		    <phase-listener>
+		        org.primefaces.component.lifecycle.LifecyclePhaseListener
+		    </phase-listener>
+		</lifecycle>
+	
 </faces-config>
