@@ -7,9 +7,6 @@
    	<persistence-unit name="baseTarefasUnit" transaction-type="JTA">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<jta-data-source>java:jboss/datasources/baseTarefasDS</jta-data-source>
-				
-		<class>br.edu.iffar.tarefas.models.TipoTarefa</class>
-		<class>br.edu.iffar.tarefas.models.Tarefa</class>
 		
       <properties>
          <!-- property name="hibernate.hbm2ddl.auto" value="update" /-->

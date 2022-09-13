@@ -19,40 +19,10 @@
 
 <h:body>
 	<main class="">
-		<noscript>
-			<div class="ui-messages ui-widget" >
-				<div class="ui-messages-warn ui-corner-all">
-					<span class="ui-messages-warn-icon"></span>
-					<ul>
-						<li role="alert" aria-atomic="true">
-							<span class="ui-messages-warn-summary"></span>
-							<span class="ui-messages-warn-detail">Habilite o suporte a javascript no seu navegador.</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</noscript>
 
 		<h:form id="frmPrincipal" style="display: flex;">
-			<div jsf:id="div">
-				<p:outputLabel value="Numero" for="somNumero"/>
-				<p:selectOneMenu id="somNumero" value="#{bean.contador}">
-					<p:ajax event="change" listener="#{bean.addMaisUm()}" update="@form" ></p:ajax>
-					<f:selectItems value="#{bean.listNumeros}" var="elemento" itemValue="#{elemento}" itemLabel="#{elemento}"></f:selectItems>
-				</p:selectOneMenu>
-			</div>
-			<div style="width: 50px"></div>
-			<div>
-				<h:outputText value="#{bean.contador}" />
-				<p:commandButton value="Contar" action="#{bean.addMaisUm()}" update="frmPrincipal" icon="pi pi-times"/>
-			</div>
 			
 		</h:form>
-				
-		<p:ajaxStatus onstart="document.getElementById('status').innerHTML = 'carregando'" oncomplete="document.getElementById('status').innerHTML = ''"></p:ajaxStatus>
-		
-		<div id="status">
-		</div>
 
 	</main>
 
